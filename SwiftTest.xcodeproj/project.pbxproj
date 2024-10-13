@@ -14,6 +14,11 @@
 		34A2D4242CBAD64F009CF196 /* SwiftTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A2D4232CBAD64F009CF196 /* SwiftTestTests.swift */; };
 		34A2D42E2CBAD64F009CF196 /* SwiftTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A2D42D2CBAD64F009CF196 /* SwiftTestUITests.swift */; };
 		34A2D4302CBAD64F009CF196 /* SwiftTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A2D42F2CBAD64F009CF196 /* SwiftTestUITestsLaunchTests.swift */; };
+		34A2D43D2CBAD758009CF196 /* Processable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A2D43C2CBAD758009CF196 /* Processable.swift */; };
+		34A2D4402CBAD902009CF196 /* TaskableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A2D43F2CBAD902009CF196 /* TaskableTests.swift */; };
+		34A2D4422CBAD918009CF196 /* ProcessableMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A2D4412CBAD918009CF196 /* ProcessableMock.swift */; };
+		34A2D4452CBAD969009CF196 /* SwiftMock in Frameworks */ = {isa = PBXBuildFile; productRef = 34A2D4442CBAD969009CF196 /* SwiftMock */; };
+		34A2D4472CBADAB8009CF196 /* Taskable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A2D4462CBADAB8009CF196 /* Taskable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,10 @@
 		34A2D4292CBAD64F009CF196 /* SwiftTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A2D42D2CBAD64F009CF196 /* SwiftTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestUITests.swift; sourceTree = "<group>"; };
 		34A2D42F2CBAD64F009CF196 /* SwiftTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		34A2D43C2CBAD758009CF196 /* Processable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Processable.swift; sourceTree = "<group>"; };
+		34A2D43F2CBAD902009CF196 /* TaskableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskableTests.swift; sourceTree = "<group>"; };
+		34A2D4412CBAD918009CF196 /* ProcessableMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessableMock.swift; sourceTree = "<group>"; };
+		34A2D4462CBADAB8009CF196 /* Taskable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taskable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34A2D4452CBAD969009CF196 /* SwiftMock in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,10 +84,11 @@
 		34A2D4062CBAD64B009CF196 = {
 			isa = PBXGroup;
 			children = (
+				34A2D4432CBAD969009CF196 /* Frameworks */,
+				34A2D4102CBAD64B009CF196 /* Products */,
 				34A2D4112CBAD64B009CF196 /* SwiftTest */,
 				34A2D4222CBAD64F009CF196 /* SwiftTestTests */,
 				34A2D42C2CBAD64F009CF196 /* SwiftTestUITests */,
-				34A2D4102CBAD64B009CF196 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +109,8 @@
 				34A2D4142CBAD64B009CF196 /* ContentView.swift */,
 				34A2D4162CBAD64E009CF196 /* Assets.xcassets */,
 				34A2D4182CBAD64E009CF196 /* Preview Content */,
+				34A2D43C2CBAD758009CF196 /* Processable.swift */,
+				34A2D4462CBADAB8009CF196 /* Taskable.swift */,
 			);
 			path = SwiftTest;
 			sourceTree = "<group>";
@@ -114,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				34A2D4232CBAD64F009CF196 /* SwiftTestTests.swift */,
+				34A2D43F2CBAD902009CF196 /* TaskableTests.swift */,
+				34A2D4412CBAD918009CF196 /* ProcessableMock.swift */,
 			);
 			path = SwiftTestTests;
 			sourceTree = "<group>";
@@ -125,6 +140,13 @@
 				34A2D42F2CBAD64F009CF196 /* SwiftTestUITestsLaunchTests.swift */,
 			);
 			path = SwiftTestUITests;
+			sourceTree = "<group>";
+		};
+		34A2D4432CBAD969009CF196 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +183,9 @@
 				34A2D4212CBAD64F009CF196 /* PBXTargetDependency */,
 			);
 			name = SwiftTestTests;
+			packageProductDependencies = (
+				34A2D4442CBAD969009CF196 /* SwiftMock */,
+			);
 			productName = SwiftTestTests;
 			productReference = 34A2D41F2CBAD64F009CF196 /* SwiftTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -215,6 +240,9 @@
 				Base,
 			);
 			mainGroup = 34A2D4062CBAD64B009CF196;
+			packageReferences = (
+				34A2D43E2CBAD7F4009CF196 /* XCRemoteSwiftPackageReference "SwiftMock" */,
+			);
 			productRefGroup = 34A2D4102CBAD64B009CF196 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,7 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34A2D4472CBADAB8009CF196 /* Taskable.swift in Sources */,
 				34A2D4152CBAD64B009CF196 /* ContentView.swift in Sources */,
+				34A2D43D2CBAD758009CF196 /* Processable.swift in Sources */,
 				34A2D4132CBAD64B009CF196 /* SwiftTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +296,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34A2D4422CBAD918009CF196 /* ProcessableMock.swift in Sources */,
 				34A2D4242CBAD64F009CF196 /* SwiftTestTests.swift in Sources */,
+				34A2D4402CBAD902009CF196 /* TaskableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +620,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		34A2D43E2CBAD7F4009CF196 /* XCRemoteSwiftPackageReference "SwiftMock" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mflint/SwiftMock";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		34A2D4442CBAD969009CF196 /* SwiftMock */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 34A2D43E2CBAD7F4009CF196 /* XCRemoteSwiftPackageReference "SwiftMock" */;
+			productName = SwiftMock;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 34A2D4072CBAD64B009CF196 /* Project object */;
 }
